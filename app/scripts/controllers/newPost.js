@@ -16,13 +16,13 @@ angular.module('inmybagApp')
     this.coverImage = null;
 
     this.save = function() {
-      blog.newPost({
+      var postId = blog.newPost({
         title: this.title,
         content: this.content,
         category: this.category,
         coverImage: this.coverImage
       });
-      $location.path('/');
+      $location.path('/post/' + postId);
     };
     
     this.initCoverImageUpload = function() {

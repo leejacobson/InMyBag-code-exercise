@@ -5,3 +5,5 @@
 <p class="view-post-content">{{ viewPost.post.content }}</p>
 
 <p>Posted in: <a href="#/category/{{ viewPost.post.category }}">{{ viewPost.post.category }}</a></p>
+
+<button ng-click="viewPost.delete();">Delete Post</button>

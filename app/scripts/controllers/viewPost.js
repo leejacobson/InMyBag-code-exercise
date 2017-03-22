@@ -8,12 +8,13 @@
  * Controller of the inmybagApp
  */
 angular.module('inmybagApp')
-  .controller('ViewPostCtrl', function ($routeParams, blog) {
+  .controller('ViewPostCtrl', function ($routeParams, $location, blog) {
     this.postId = $routeParams.postId;
-    this.posts = blog.getAll();
 
-    var self = this;
-    this.post = this.posts.find(function(post) {
-      return parseInt(self.postId) === post.id;
-    });
+    this.post = blog.getPost(this.postId);
+    
+    this.delete = function() {
+      blog.deletePost(this.postId);
+      $location.path('/');
+    };
   });

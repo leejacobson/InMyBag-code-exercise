@@ -47,19 +47,37 @@ angular
   .factory('blog', function (localStorageService) {
     var blogObj = {};
     blogObj.getAll = function() {
-      var blogs = localStorageService.get('blogs');
-      if (!blogs) {
-        blogs = [];
+      var posts = localStorageService.get('posts');
+      if (!posts) {
+        posts = [];
       }
-      return blogs;
+      return posts;
     };
     blogObj.newPost = function(post) {
-      var blogs = blogObj.getAll();
-      var postId = blogs.length > 0 ? blogs[blogs.length-1].id + 1 : 1;
+      var posts = blogObj.getAll();
+      var postId = posts.length > 0 ? posts[posts.length-1].id + 1 : 1;
       post.id = postId;
-      blogs.push(post);
-      localStorageService.set('blogs', blogs);
+      posts.push(post);
+      localStorageService.set('posts', posts);
       blogObj.addCategory(post.category);
+      
+      return postId;
+    };
+    blogObj.getPost = function(postId) {
+      var posts = blogObj.getAll();
+      return posts.find(function(post) {
+        return parseInt(postId) === post.id;
+      });
+    };
+    blogObj.deletePost = function(postId) {
+      var posts = blogObj.getAll();
+      var postIndex = posts.findIndex(function(post) {
+        return parseInt(postId) === post.id;
+      });
+      if (postIndex > -1) {
+        posts.splice(postIndex, 1);
+      }
+      localStorageService.set('posts', posts);
     };
     blogObj.getCategories = function() {
       var categories = localStorageService.get('blogCategories');

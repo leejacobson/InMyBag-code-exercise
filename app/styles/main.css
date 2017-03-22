@@ -1,0 +1,127 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+.header {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 10px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  .header {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+#post-cover-image-input{
+  display:none;
+}
+
+input, select, textarea {
+  padding: 6px 10px;
+}
+
+.post-cover-image, .post-title-input, .post-content-input, .post-category-input{
+  border: 1px solid #999;
+}
+.post-cover-image:hover, .post-cover-image:focus, .post-title-input:focus, .post-content-input:focus, .post-category-input:focus{
+  border: 1px solid #47f;
+  outline:none;
+  text-decoration:none;
+}
+
+.post-cover-image {
+  display: block;
+  padding:40px;
+  width: 700px;
+  text-align: center;
+  color:#888;
+  text-decoration:none;
+  font-size:28px;
+  font-weight:bold;
+}
+
+.post-title-input {
+  width: 700px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.post-content-input {
+  width: 700px;
+  height: 400px;
+}
+
+
+.blog-post-card, .blog-post-card-bg, .blog-post-card-title {
+  width:700px;
+  height:200px;
+}
+.blog-post-card {
+  position:relative;
+  margin-bottom:15px;
+  background:#abd;
+  overflow:hidden;
+  box-shadow:inset 0 0 25px rgba(0,0,0,0.2)
+}
+.blog-post-card-bg {
+  position: absolute;
+  opacity:0.5;
+}
+.blog-post-card-title {
+  display:inline-block;
+  position: absolute;
+  text-align:center;
+  line-height:200px;
+  font-size:30px;
+  color:#222;
+}
+
+.view-post-content{
+  white-space: pre;
+}
+
+.view-post-cover{
+  height:250px;
+  width:700px;
+}

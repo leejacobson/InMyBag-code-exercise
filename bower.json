@@ -1,0 +1,29 @@
+{
+  "name": "inmybag",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "~1.5.8",
+    "bootstrap": "^3.2.0",
+    "angular-animate": "~1.5.8",
+    "angular-cookies": "~1.5.8",
+    "angular-resource": "~1.5.8",
+    "angular-route": "~1.5.8",
+    "angular-sanitize": "~1.5.8",
+    "angular-touch": "~1.5.8",
+    "angular-local-storage": "^0.5.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.5.8"
+  },
+  "appPath": "app",
+  "moduleName": "inmybagApp",
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  }
+}

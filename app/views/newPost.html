@@ -1,0 +1,23 @@
+<h1>New Post</h1>
+<div>
+  <label for="post-cover-image">Cover Image</label><br />
+  <a href="" class="post-cover-image" ng-click="newPost.initCoverImageUpload()" ng-style="newPost.coverImage ? {background: 'url(' + newPost.coverImage + ') center center/cover'} : {}">+</a>
+  <input type="file" accept=".jpg, .gif, .png" id="post-cover-image-input" ng-model="newPost.coverImage" file-reader /><br />
+  <label for="post-title">Title</label><br />
+  <input id="post-title" type="text" ng-model="newPost.title" class="post-title-input" /><br />
+  <br />
+  <label for="post-content">Content</label><br />
+  <textarea id="post-content" ng-model="newPost.content" class="post-content-input"></textarea><br />
+  <br />
+  <label for="post-category">Category</label><br />
+  <select class="post-category-input" ng-model="newPost.category">
+    <option ng-repeat="category in newPost.categories track by $index" ng-selected="{{newPost.category == category}}" value="{{category}}">{{category}}</option>
+  </select> <a href="" ng-click="newPost.showAddCategory()">Add New Category</a><br />
+  <div ng-show="newPost.addingCategory">
+    <br />
+    <label for="add-category">Add Category</label><br />
+    <input type="text" ng-model="newPost.newCategory" /> <input type="submit" value="Add" ng-click="newPost.addCategory(newPost.newCategory)" />
+  </div>
+  <br />
+  <input type="submit" value="Save Post" ng-click="newPost.save()" />
+</div>

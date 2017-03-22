@@ -6,4 +6,6 @@
 
 <p>Posted in: <a href="#/category/{{ viewPost.post.category }}">{{ viewPost.post.category }}</a></p>
 
+<p>Posted by: {{ viewPost.user.username ? viewPost.user.username : 'Anonymous' }}</a></p>
+
 <button ng-click="viewPost.delete();">Delete Post</button>

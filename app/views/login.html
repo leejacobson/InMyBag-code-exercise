@@ -1,0 +1,25 @@
+<h1>Login</h1>
+
+<h2>Existing Account</h2>
+<span class="error-msg" ng-show="loginCtrl.loginError">{{ loginCtrl.loginError }}</span>
+<form ng-submit="loginCtrl.login()">
+<label>Username</label><br />
+<input type="text" ng-model="loginCtrl.username" /><br />
+<br />
+<label>Password</label><br />
+<input type="password" ng-model="loginCtrl.password" /><br />
+<br />
+<input type="submit" value="Login"  /><br />
+</form>
+<br />
+<h2>Create Account</h2>
+<span class="error-msg" ng-show="loginCtrl.createUserError">{{ loginCtrl.createUserError }}</span>
+<form ng-submit="loginCtrl.createUser()">
+<label>Username</label><br />
+<input type="text" ng-model="loginCtrl.newUsername" /><br />
+<br />
+<label>Password</label><br />
+<input type="password" ng-model="loginCtrl.newPassword" /><br />
+<br />
+<input type="submit" value="Create Account" /><br />
+</form>

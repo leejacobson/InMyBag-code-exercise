@@ -133,3 +133,7 @@ input, select, textarea {
   height:250px;
   width:700px;
 }
+
+.error-msg{
+  color:#a00;
+}

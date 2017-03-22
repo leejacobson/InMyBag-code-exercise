@@ -11,5 +11,9 @@ angular.module('inmybagApp')
   .controller('ViewPostCtrl', function ($routeParams, blog) {
     this.postId = $routeParams.postId;
     this.posts = blog.getAll();
-    this.post = this.posts[this.postId];
+
+    var self = this;
+    this.post = this.posts.find(function(post) {
+      return parseInt(self.postId) === post.id;
+    });
   });

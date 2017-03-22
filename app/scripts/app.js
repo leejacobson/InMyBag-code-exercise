@@ -35,6 +35,11 @@ angular
         controller: 'ViewPostCtrl',
         controllerAs: 'viewPost'
       })
+      .when('/category/:category', {
+        templateUrl: 'views/categoryPosts.html',
+        controller: 'CategoryPostsCtrl',
+        controllerAs: 'categoryPosts'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -50,6 +55,8 @@ angular
     };
     blogObj.newPost = function(post) {
       var blogs = blogObj.getAll();
+      var postId = blogs.length > 0 ? blogs[blogs.length-1].id + 1 : 1;
+      post.id = postId;
       blogs.push(post);
       localStorageService.set('blogs', blogs);
       blogObj.addCategory(post.category);
@@ -71,4 +78,10 @@ angular
     };
 
     return blogObj;
+  })
+  .directive('blogPostCard', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'views/blogPostCard.html',
+    };
   });

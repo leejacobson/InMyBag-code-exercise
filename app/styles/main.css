@@ -108,6 +108,10 @@ input, select, textarea {
   position: absolute;
   opacity:0.5;
 }
+.blog-post-card:hover {
+  background:#bce;
+}
+
 .blog-post-card-title {
   display:inline-block;
   position: absolute;
@@ -115,6 +119,10 @@ input, select, textarea {
   line-height:200px;
   font-size:30px;
   color:#222;
+}
+.blog-post-card-title:hover,.blog-post-card-title:focus{
+  color:#222;
+  text-decoration:none;
 }
 
 .view-post-content{

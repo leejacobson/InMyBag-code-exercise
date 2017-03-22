@@ -5,8 +5,8 @@ version 0.16.0.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+Run `grunt build` for building and `grunt serve` for preview.
 
-## Testing
+## Demo
 
-Running `grunt test` will run the unit tests with karma.
+http://www.leejacobson.co.uk/examples/inmybag/
